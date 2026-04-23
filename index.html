@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="从世界观、外表、性格三个维度快速抽取角色雏形的轻量灵感工具。">
+  <meta name="theme-color" content="#15141d">
+  <meta name="color-scheme" content="dark">
+  <meta name="application-name" content="OC 设定生成器">
+  <meta name="apple-mobile-web-app-title" content="OC 设定生成器">
+  <title>OC 设定生成器</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" id="brandButton" type="button">OC 设定生成器</button>
+      <div class="toolbar">
+        <button class="icon-button" id="settingsButton" type="button" aria-label="打开设置面板">⚙</button>
+        <div class="popover hidden" id="settingsPanel" role="menu" aria-label="设置面板">
+          <button class="menu-item" id="aboutButton" type="button">创作者信息</button>
+          <button class="menu-item" id="feedbackButton" type="button">反馈</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="hero state-home" id="generatorView">
+        <p class="eyebrow">轻量灵感工具</p>
+        <h1 class="hero-title" id="heroTitle">OC 设定生成器</h1>
+        <p class="hero-copy" id="heroCopy">从世界观、外表、性格三个维度快速抽取角色雏形。</p>
+
+        <section class="cards" id="cardsSection" aria-live="polite">
+          <article class="card" data-card="world">
+            <p class="card-kicker">世界观</p>
+            <h2 class="card-title" id="worldTitle">等待生成</h2>
+            <p class="card-detail" id="worldDetail">身份与元素会出现在这里</p>
+          </article>
+          <article class="card" data-card="appearance">
+            <p class="card-kicker">外表</p>
+            <h2 class="card-title" id="appearanceTitle">等待生成</h2>
+            <p class="card-detail card-detail-soft" id="appearanceDetail">发型、五官、特征会组合展示</p>
+          </article>
+          <article class="card" data-card="personality">
+            <p class="card-kicker">性格</p>
+            <h2 class="card-title" id="personalityTitle">等待生成</h2>
+            <p class="card-detail card-detail-soft" id="personalityDetail">人格底色与互动模式会出现在这里</p>
+          </article>
+        </section>
+
+        <div class="actions">
+          <button class="primary-button" id="generateButton" type="button">开始生成</button>
+          <button class="icon-button secondary" id="loopButton" type="button" aria-pressed="false" aria-label="切换持续随机">↻</button>
+        </div>
+      </section>
+
+      <section class="policy-page hidden" id="policyPage">
+        <button class="text-button" id="backFromPolicy" type="button">返回首页</button>
+        <h2>政策说明</h2>
+        <div class="policy-content" id="policyContent"></div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footerNav">
+      <button class="footer-link" id="disclaimerLink" type="button">免责声明</button>
+      <button class="footer-link" id="privacyLink" type="button">隐私政策</button>
+      <button class="footer-link" id="supportLink" type="button">使用说明</button>
+      <p class="copyright">© 2026 OC 设定生成器</p>
+    </footer>
+  </div>
+
+  <div class="toast hidden" id="toast">随机成功</div>
+
+  <div class="modal hidden" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="modalTitle">信息</h2>
+        <button class="icon-button" id="closeModal" type="button" aria-label="关闭弹窗">×</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
