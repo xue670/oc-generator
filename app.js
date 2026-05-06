@@ -45,10 +45,17 @@ function sample(list) {
 function showToast(message) {
   clearTimeout(state.toastTimer);
   elements.toast.textContent = message;
-  elements.toast.classList.remove("hidden");
+  elements.toast.classList.remove("hidden", "is-hiding");
+  void elements.toast.offsetWidth;
+  elements.toast.classList.add("is-visible");
   state.toastTimer = window.setTimeout(() => {
-    elements.toast.classList.add("hidden");
-  }, 1500);
+    elements.toast.classList.remove("is-visible");
+    elements.toast.classList.add("is-hiding");
+    window.setTimeout(() => {
+      elements.toast.classList.add("hidden");
+      elements.toast.classList.remove("is-hiding");
+    }, 220);
+  }, 2000);
 }
 
 function openModal(title, body) {
@@ -166,7 +173,7 @@ function toggleLoop() {
   setLooping(true);
   state.loopTimer = window.setInterval(() => {
     renderGeneration();
-  }, 100);
+  }, 500);
 }
 
 function resetHome() {
