@@ -173,7 +173,7 @@ function toggleLoop() {
   setLooping(true);
   state.loopTimer = window.setInterval(() => {
     renderGeneration();
-  }, 500);
+  }, 700);
 }
 
 function resetHome() {
