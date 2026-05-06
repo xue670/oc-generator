@@ -719,3 +719,104 @@ button {
     border-radius: 24px;
   }
 }
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .topbar {
+    padding: 14px 0 8px;
+  }
+
+  .topbar .icon-button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .hero {
+    padding-top: 8px;
+  }
+
+  .cards {
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .card {
+    min-height: 156px;
+    padding: 20px;
+  }
+
+  .card-badge {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .card-icon,
+  .card-icon-image {
+    width: 18px;
+    height: 18px;
+  }
+
+  .card-icon-world {
+    width: 18px;
+    height: 16px;
+  }
+
+  .card-icon-appearance {
+    width: 17px;
+    height: 17px;
+  }
+
+  .card-icon-personality {
+    width: 15px;
+    height: 15px;
+  }
+
+  .card-kicker {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .card-title {
+    max-width: 260px;
+    margin-bottom: 0;
+    font-size: 19px;
+    line-height: 1.25;
+  }
+
+  .card-detail,
+  .card-detail-soft {
+    display: none;
+  }
+
+  .actions {
+    margin-top: 12px;
+    gap: 12px;
+  }
+
+  .primary-button {
+    min-height: 64px;
+    padding: 0 20px;
+    font-size: 1.02rem;
+  }
+
+  .primary-button::before {
+    width: 22px;
+    height: 22px;
+  }
+
+  .secondary {
+    width: 64px;
+    height: 64px;
+    flex-basis: 64px;
+  }
+
+  .secondary::before {
+    width: 26px;
+    height: 26px;
+  }
+
+  .footer {
+    padding-top: 10px;
+  }
+}
